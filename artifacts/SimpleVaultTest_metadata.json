@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test1_deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test2_withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test3_overWithdrawReverts",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test4_zeroDepositReverts",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"test1_deposit()": {
+					"notice": "#value: 1000"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/SimpleVault_test.sol": "SimpleVaultTest"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleVault.sol": {
+			"keccak256": "0xd3b5640ee5f99fbb31045c76a52ff20e6a9ec2a3df19b1b29e6cd0daa5d08c45",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b84432e58c4534f0d5d19815c62a07af7398526bdb75cfac7df3075ff296dffb",
+				"dweb:/ipfs/Qmea3ZbVju45fpVeifFaNxBDoBJDSWP3jbi5VnAU7rBBWx"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/SimpleVault_test.sol": {
+			"keccak256": "0x403e09a643a80841aba619f83b00b2f3e43462883e896528553b0066a85fbb2f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b54922d2e023c5a43fdef31950fecd929d2d30b6da0715d385e1e6c8a69cfc9c",
+				"dweb:/ipfs/QmRpazDrsMvSENNApU59tjvLU8QLFGJg6cAUuQAycp9kb3"
+			]
+		}
+	},
+	"version": 1
+}
