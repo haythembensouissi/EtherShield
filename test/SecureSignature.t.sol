@@ -12,13 +12,19 @@ contract SecureSignatureTest is Test {
     address signer;
     address recipient;
     address relayer;
-
+function makeTestAddress(string memory name)
+    internal
+    pure
+    returns (address)
+{
+    return address(uint160(uint256(keccak256(bytes(name)))));
+}
     function setUp() public {
         secure = new SecureSignature();
 
         signer = vm.addr(PRIVATE_KEY);
-        recipient = makeAddr("recipient");
-        relayer = makeAddr("relayer");
+        recipient = makeTestAddress("recipient");
+        relayer = makeTestAddress("relayer");
 
         vm.warp(1800000000);
     }
@@ -230,7 +236,7 @@ contract SecureSignatureTest is Test {
             deadline
         );
 
-        address attacker = makeAddr("attacker");
+        address attacker = makeTestAddress("attacker");
 
         vm.expectRevert(
             abi.encodeWithSignature(
@@ -261,7 +267,7 @@ contract SecureSignatureTest is Test {
             deadline
         );
 
-        address fakeSigner = makeAddr("fakeSigner");
+        address fakeSigner = makeTestAddress("fakeSigner");
 
         vm.expectRevert(
             abi.encodeWithSignature(

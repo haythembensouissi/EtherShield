@@ -12,12 +12,18 @@ contract VulnerableSignatureTest is Test {
 
     address signer;
     address recipient;
-
+function makeTestAddress(string memory name)
+    internal
+    pure
+    returns (address)
+{
+    return address(uint160(uint256(keccak256(bytes(name)))));
+}
     function setUp() public {
         vulnerable = new VulnerableSignature();
 
         signer = vm.addr(PRIVATE_KEY);
-        recipient = makeAddr("recipient");
+        recipient = makeTestAddress("recipient");
     }
 
     function test_ReplayAttackSucceeds() public {
@@ -36,7 +42,7 @@ contract VulnerableSignatureTest is Test {
 
         bytes memory signature = abi.encodePacked(r, s, v);
 
-        address attacker = makeAddr("attacker");
+        address attacker = makeTestAddress("attacker");
 
         // First execution.
         vm.prank(attacker);

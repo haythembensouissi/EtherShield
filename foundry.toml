@@ -7,5 +7,6 @@ solc_version = "0.8.38"
 
 remappings = [
     "@openzeppelin/contracts/=.deps/npm/@openzeppelin/contracts@5.6.1/",
-    "forge-std/=.deps/npm/forge-std@1.1.2/"
+    "forge-std/=.deps/npm/forge-std@1.1.2/",
+    "ds-test/=.deps/npm/ds-test/src/"
 ]
